@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Montserrat;
+}
+
+body{
+    background: #020725;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+html,body{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+html{
+    background: #eee;
+}
+
+.box{
+    width: 40vw;
+    height: 90vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(255, 255, 255, 0.2);
+    background: #a5bbdd;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    min-width: 20rem;
+    min-height: 35rem;
+}
+
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 115%;
+    left: 0%;
+    background: white;
+    width: 100rem;
+    height: 100rem;
+    margin-left: -25rem;
+    margin-top: -25rem;
+    transform-origin: 50% 48%;
+    border-radius: 49%;
+    animation: drift 9000ms infinite linear;
+    z-index: 1;
+}
+
+
+
+.-two{
+    animation: drift 13000ms infinite linear;
+   z-index: 3 !important;
+    opacity: 0.2;
+}
+.box:after{
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate(0,0,0);
+}
+
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+.info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    z-index: 4;
+}
+.location{
+    margin-top:6rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    animation: rotate 4s linear infinite alternate;
+
+}
+@keyframes rotate {
+    from{
+        transform: translateY(-1rem);
+    }
+    to{
+        transform: translateY(0rem);
+    } 
+}
+.search{
+    z-index: 15;
+    margin-top: 1rem;
+     display: flex;
+     margin-top: 1 rem;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: nowrap;
+     gap:0.5rem;
+}
+.search input{
+    background-color: rgb(213, 227, 238);
+    border-color: #ffffff;
+    text-align: center;
+    color: rgb(120, 111, 111);
+
+
+
+}
+.search input:focus{
+    outline: none;
+}
+.search button{
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-y: center;
+    background-position-x: center;
+    cursor: pointer;
+    background-color:transparent;
+    font-size: 1.5rem;
+    color: rgb(134, 124, 124);
+    width: 3rem;
+    border: #4b96d8;
+    
+
+    
+}
+.search input:hover{
+    background-color: rgb(255, 255, 255);
+    cursor:text;
+    box-shadow: 0 8px 20px 0 rgba(182, 110, 148, 0.288), 0 6px 20px 0 rgba(220, 213, 213, 0.19);
+
+
+
+}
+
+
+
+
+
+#date{
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #ec7fb0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    animation: rotate 4s linear infinite alternate;
+
+}
+
+.temp{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color:rgb(2, 31, 75);
+    animation: rotate 4s linear infinite alternate;
+
+}
+
+h3{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4b96d8;
+    text-align:center;
+    animation: rotate 4s linear infinite alternate;
+
+}
+
+#weatherCon{
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+#weatherCon .fa-solid{
+    font-size: 6rem;
+    animation: fas-anime 4.5s linear infinite alternate;
+}
+
+@keyframes fas-anime {
+    from{
+        transform: scale(1.9);
+    }
+    to{
+        transform: scale(1.5);
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .box{
+        width: 90vw;
+        height: 80vh;
+    }
+    .wave{
+        top: 85%;
+    }
+    #weathercon{
+        font-size: 5em;
+    }
+    .info{
+        font-size: 1.5rem;
+    }
+    
+}
+body>span{
+    width: 100vw;
+    text-align: center;
+    color: rgb(209, 133, 191);
+}
