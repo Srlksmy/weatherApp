@@ -1,0 +1,1 @@
+This project is a simple weather application developed using HTML, CSS, and JavaScript, leveraging the OpenWeatherMap API for real-time weather data. The app allows users to view current weather conditions, including temperature & weather descriptions for any specified location.
