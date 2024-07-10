@@ -35,7 +35,7 @@ const getInfo = async (event) => {
                 }else if (tempStatus=='Haze'){
                     weatherCon.innerHTML='<i class="fa-solid fa-smog"></i>'; 
                 } else {
-                    weatherCon.innerHTML = '<i class="fa-solid fa-cloud-sun style="color:#e5d65e"></i>';
+                    weatherCon.innerHTML = '<i class="fa-solid fa-cloud-sun" style="color:#e5d65e"></i>';
                 }
             }
         } catch (error) {
