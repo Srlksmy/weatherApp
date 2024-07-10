@@ -69,4 +69,12 @@ document.getElementById("date").innerHTML = current_specs;
 
 const submitBtn = document.getElementById('searchbutton');
 submitBtn.addEventListener('click', getInfo);
+var input = document.getElementById("myInput");
+
+submitBtn.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    getInfo();
+   
+  }
+});
 
