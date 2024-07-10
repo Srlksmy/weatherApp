@@ -29,11 +29,11 @@ const getInfo = async (event) => {
                 if (tempStatus === "Clear") {
                     weatherCon.innerHTML = '<i class="fa-solid fa-sun" style="color:#e5d65e"></i>';
                 } else if (data.main.temp <=15) {
-                    weatherCon.innerHTML = '<i class="fa-solid fa-temperature-arrow-down style="color:#ffffff" ></i>';
+                    weatherCon.innerHTML = '<i class="fa-solid fa-temperature-arrow-down" style="color:#ffffff" ></i>';
                 } else if (tempStatus === "Rain") {
                     weatherCon.innerHTML = "<i class='fa-solid fa-cloud-rain' style='color:#ffffff'></i>";
                 }else if (tempStatus=='Haze'){
-                    weatherCon.innerHTML='<i class="fa-solid fa-smog"></i>'; 
+                    weatherCon.innerHTML='<i class="fa-solid fa-smog" style="color:#ffffff"></i>'; 
                 } else {
                     weatherCon.innerHTML = '<i class="fa-solid fa-cloud-sun" style="color:#e5d65e"></i>';
                 }
